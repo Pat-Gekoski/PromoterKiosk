@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CustomerInfoActivity">
+
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/container_customer_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="150dp"
+        android:divider="@drawable/divider_dark"
+        android:orientation="horizontal"
+        android:paddingEnd="75dp"
+        android:paddingStart="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:gravity="bottom|end"
+            android:paddingEnd="8dp"
+            android:paddingStart="5dp"
+            android:text="@string/user_name_label"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="start"
+            android:ems="10"
+            android:inputType="none|textNoSuggestions"
+            android:maxLength="40"
+            android:singleLine="true"
+            android:textColorLink="@android:color/holo_blue_bright"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/arrow_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:contentDescription="@string/arrow_description"
+            app:srcCompat="@drawable/back_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="150dp"
+        android:orientation="horizontal"
+        android:paddingEnd="75dp"
+        android:paddingStart="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_row_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:gravity="bottom|end"
+            android:paddingEnd="8dp"
+            android:paddingStart="5dp"
+            android:text="@string/user_email_label"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_customer_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="none|textNoSuggestions"
+            android:singleLine="true"
+            android:textColorLink="@android:color/holo_blue_bright"
+            android:textSize="30sp"
+            tools:ignore="TextFields" />
+
+        <ImageView
+            android:id="@+id/arrow_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:contentDescription="@string/arrow_description"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/back_arrow" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_right_invisible"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_left_invisible"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:maxLength="130"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right_invisible"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/keyboard_row_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_row_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/one"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/two"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/three"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/four"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/five"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/six"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/seven"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/eight"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/nine"
+            android:onClick="type"/>
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/zero"
+            android:onClick="type"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard_row_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_row_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/Q"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/W"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/E"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/R"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/T"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/Y"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/U"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/I"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/O"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/P"
+            android:onClick="type"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard_row_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_row_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/A"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/S"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/D"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/F"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/G"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/H"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/J"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/K"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/L"
+            android:onClick="type"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard_row_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="157dp"
+        android:layout_marginStart="157dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_row_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight=".5"
+            android:text="@string/underscore"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/Z"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/X"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/C"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/V"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/B"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/N"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/M"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight=".5"
+            android:text="@string/hyphen"
+            android:onClick="type"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard_row_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_disclaimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:background="@android:color/holo_red_dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:onClick="type"
+            android:text="@string/back" />
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/at"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="3"
+            android:text="@string/space"
+            android:onClick="type"/>
+
+        <Button
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/period"
+            android:onClick="type"/>
+
+        <Button
+            android:id="@+id/bt_enter_next"
+            style="@style/keyboard_button_style"
+            android:layout_width="0dp"
+            android:background="@android:color/holo_green_dark"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="@string/enter"
+            android:onClick="submitInfo"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_disclaimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="150dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

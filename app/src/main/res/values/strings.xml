@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">PromoterKiosk</string>
+
+    <string name="main_screen_img">This is the default image for the main screen</string>
+
+    <!--CustomerInfoActivity-->
+    <string name="user_name_label">Name:</string>
+    <string name="user_email_label">Email:</string>
+
+
+    <!--AdminActivity-->
+    <string name="system_id_label">System ID:</string>
+    <string name="system_password_label">Password:</string>
+    <string name="get_pictures_button">Get Pictures List</string>
+    <string name="set_picture_button">Set Picture</string>
+    <string name="instructions_hint">Enter instructions here</string>
+    <string name="disclaimer_hint">Enter disclaimer here</string>
+    <string name="upload_data_button">Upload All Data</string>
+    <string name="clear_data_button">Clear All Data</string>
+    <string name="save_config_button">Save Config</string>
+    <string name="run_button">Run</string>
+    <string name="exit_program_button">Exit Program</string>
+    <string name="dialog_title">Remove All Customer Data?</string>
+    <string name="dialog_warning">This can\'t be undone! \n All existing customer data will be removed from this device</string>
+    <string name="date_button">Date of Drawing</string>
+    <string name="date_of_drawing_label">Date of drawing</string>
+    <string name="print_tickets_checkbox">Print Tickets</string>
+
+    <string name="error_configuration">Please configure your serial port first.</string>
+    <string name="error_security">You do not have read/write permission to the serial
+		port.</string>
+    <string name="error_unknown">The serial port can not be opened for an unknown
+		reason.</string>
+    <string name="number_of_records">Records: %1$d</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="good_luck">and good luck</string>
+    <string name="clear_data_title">Clear All Data From Device?</string>
+
+    <string name="arrow_description">arrow pointing towards active text field</string>
+    <string name="version">PromoterKiosks Version: %1$s</string>
+    <string name="branding">WWW.PromoterKiosks.com</string>
+
+
+    <!--Keyboard-->
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
+    <string name="E">E</string>
+    <string name="F">F</string>
+    <string name="G">G</string>
+    <string name="H">H</string>
+    <string name="I">I</string>
+    <string name="J">J</string>
+    <string name="K">K</string>
+    <string name="L">L</string>
+    <string name="M">M</string>
+    <string name="N">N</string>
+    <string name="O">O</string>
+    <string name="P">P</string>
+    <string name="Q">Q</string>
+    <string name="R">R</string>
+    <string name="S">S</string>
+    <string name="T">T</string>
+    <string name="U">U</string>
+    <string name="V">V</string>
+    <string name="W">W</string>
+    <string name="X">X</string>
+    <string name="Y">Y</string>
+    <string name="Z">Z</string>
+    <string name="hyphen">-</string>
+    <string name="back">BACK</string>
+    <string name="space">SPACE</string>
+    <string name="next">NEXT</string>
+    <string name="enter">ENTER</string>
+    <string name="period">.</string>
+    <string name="at">\@</string>
+    <string name="underscore">_</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+
+</resources>
